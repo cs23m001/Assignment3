@@ -114,12 +114,12 @@ def plot_attention(input_word, predicted_word, attention_map, file_name = None):
 
   ax.xaxis.set_major_locator(ticker.MultipleLocator(1))
   ax.yaxis.set_major_locator(ticker.MultipleLocator(1))
-#   plt.show()
+  plt.show()
 
-  plt.savefig(path)
-  with wandb.init(entity="cs23m001-iit-m", project="ass3_att_heatmap", name=file_name):
-        wandb.log({'Attention Heatmap' : wandb.Image(plt)})
-  wandb.finish()    
+#   plt.savefig(path)
+#   with wandb.init(entity="cs23m001-iit-m", project="ass3_att_heatmap", name=file_name):
+#         wandb.log({'Attention Heatmap' : wandb.Image(plt)})
+#   wandb.finish()    
 
 
 # Loading the test dataloader
